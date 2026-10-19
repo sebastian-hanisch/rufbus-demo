@@ -404,11 +404,6 @@ with st.expander("📐 Mathematische Formulierung"):
     st.latex(r"c_{\text{Ruf}} = \frac{K^*\,T}{n_{\text{bedient}}}, \qquad c_{\text{Linie}} = \frac{N^*\,T}{n_{\text{Anfragen}}\cdot \text{Erreichbarkeit}}")
     st.markdown("Der **Kipppunkt** ist die Dichte, bei der beide Kurven gleich sind (log-linear zwischen den gemessenen Dichten interpoliert; Bootstrap über die Zufalls-Seeds).")
 
-st.markdown("**War diese Demo hilfreich für Sie?**")
-fb1, fb2 = st.columns(2)
-fb1.button("👍 Ja", key="feedback_up", width="stretch")
-fb2.button("👎 Nein", key="feedback_down", width="stretch")
-
 st.markdown("---")
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
