@@ -74,6 +74,17 @@ Vorgänger und Nachbarn: das feste Liniennetz der [ÖPNV-Liniennetz-Demo](https:
 """
 )
 
+# erklaerseite:einfach:start (erzeugt von tools/set_demo_explainer.py (Website-Repo) aus tools/content/explainers/rufbus-oder-linienbus-erklaert.json, nicht von Hand ändern)
+with st.expander("💬 In einfachen Worten"):
+    st.markdown(
+        """
+Ein **Linienbus** fährt nach festem Plan, ob jemand einsteigt oder nicht. Ein **Rufbus** fährt nur, wenn jemand ihn ruft, und nimmt auf einer Tour oft mehrere Fahrgäste zusammen mit. Bei wenigen Fahrtwünschen braucht der Rufbus wenige Fahrzeuge und ist billiger. Der Linienbus braucht dagegen für dieselbe Wartezeit praktisch immer dieselbe Flotte, egal wie viele Fahrgäste kommen. Die Demo sucht den **Kipppunkt**, ab dem der Linienbus billiger wird, und zeigt, dass er davon abhängt, was man als gleiche Qualität ansieht: gleiche Wartezeit oder gleiche Gesamtreisezeit. Je nach Maß gibt es einen Kipppunkt oder keinen. Es ist ein stark vereinfachtes Modell, das den Vergleich erklärt, keinen allgemeingültigen Schwellenwert.
+
+[Ausführlich und verständlich erklärt, mit Fachteil](https://sebastianhanisch.net/rufbus-oder-linienbus-erklaert.html)
+        """
+    )
+# erklaerseite:einfach:end
+
 st.caption("🔗 Die Adresszeile oben spiegelt Ihre aktuelle Konfiguration wider – einfach kopieren, um ein Szenario zu teilen.")
 
 load_permalink_settings()
@@ -393,6 +404,26 @@ bei dem die Route am wenigsten länger wird. **Flotte K\\***: die kleinste Flott
     )
 
 with st.expander("📐 Mathematische Formulierung"):
+    # erklaerseite:lesehilfe:start (erzeugt von tools/set_demo_explainer.py (Website-Repo) aus tools/content/explainers/rufbus-oder-linienbus-erklaert.json, nicht von Hand ändern)
+    st.markdown(
+        r"""
+**Lesehilfe.** Gegeben sind ein Gebiet mit Haltepunkten, die Fahrtwünsche pro Stunde und die Qualitätsgrenzen für den Rufbus (Wartezeit, Umweg, Plätze). Gesucht sind die kleinste Flotte des Rufbusses und die kleinste Fahrzeugzahl des Linienbusses bei gleicher Qualität, daraus die Kosten je Fahrgast und der Kipppunkt, an dem beide Kosten gleich sind.
+
+| Symbol | Bedeutung |
+|---|---|
+| $t$, $o$, $d$ | Anfragezeit, Start und Ziel eines Fahrtwunsches |
+| $a_p$, $a_d$ | Abholzeit und Ankunftszeit am Ziel |
+| $W$, $f$ | höchste Wartezeit, Umwegfaktor |
+| $t_{od}$, $\delta$, $s$ | Direktfahrzeit, Halt je Aufnahme oder Absetzen, Aufschlag |
+| $K^*$, $K'$ | kleinste Flotte des Rufbusses, eine beliebige größere Flotte |
+| $N^*$, $N'$, $C$, $h$ | kleinste Fahrzeugzahl des Linienbusses, eine größere Zahl, Umlaufzeit, Takt |
+| $c_{\text{Ruf}}$, $c_{\text{Linie}}$ | Fahrzeugstunden je Fahrgast bei Rufbus und Linienbus |
+| $T$, $n_{\text{bedient}}$, $n_{\text{Anfragen}}$ | Messfenster, bediente Fahrgäste, Zahl der Anfragen im Fenster |
+
+[Schritt für Schritt erklärt, mit Herleitung und Literatur](https://sebastianhanisch.net/rufbus-oder-linienbus-erklaert.html#fachleute)
+        """
+    )
+    # erklaerseite:lesehilfe:end
     st.markdown("**Rufbus.** Für jede angenommene Anfrage mit Anfragezeit $t$, Start $o$ und Ziel $d$ gilt für Abholzeit $a_p$ und Ankunftszeit $a_d$ am Ziel:")
     st.latex(r"a_p \le t + W")
     st.latex(r"a_d - a_p \le f\,(t_{od} + \delta) + s")
