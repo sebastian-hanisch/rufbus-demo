@@ -110,7 +110,7 @@ Alle Zahlen stehen in `data/ruf_results.json` und sind in `tests/test_claims.py`
 
 - **[transit-demo](https://github.com/sebastian-hanisch/transit-demo):** das feste Liniennetz, aus dem der Linienbus-Vergleich hervorgeht; dort wird nur die Linienführung gewählt, keine Flotte.
 - **[taktfahrplan-demo](https://github.com/sebastian-hanisch/taktfahrplan-demo):** Abfahrtsminuten für feste Linien, die nächste Stufe nach dem Liniennetz.
-- **[vrp_demo](https://github.com/sebastian-hanisch/vrp_demo):** Touren mit Zeitfenstern; Pickup and Delivery steht dort nur als ungebaute Erweiterung. Der Rufbus ist ein Dial-a-Ride-Problem (Pickup and Delivery mit Zeitfenstern und Fahrzeitlimit).
+- **[vrp-demo](https://github.com/sebastian-hanisch/vrp-demo):** Touren mit Zeitfenstern; Pickup and Delivery steht dort nur als ungebaute Erweiterung. Der Rufbus ist ein Dial-a-Ride-Problem (Pickup and Delivery mit Zeitfenstern und Fahrzeitlimit).
 - **[nahverkehr-demo](https://github.com/sebastian-hanisch/nahverkehr-demo):** Same-Day-Aufträge und Planstabilität; andere Frage (Annahme und Neuplanung von Touren, keine Fahrgäste).
 - **[warehouse-transfer-demo](https://github.com/sebastian-hanisch/warehouse-transfer-demo):** Pickup and Delivery im Lager mit Umschlagpunkten; gleiche Struktur der Einfügung, andere Kulisse.
 
