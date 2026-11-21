@@ -57,7 +57,7 @@ Alle Zahlen stehen in `data/ruf_results.json` und sind in `tests/test_claims.py`
 - **Linienbus:** Zeiten einer Linie von Hand, Winkelreihenfolge gegen `atan2`, Wegetabelle gegen networkx (`tests/test_line.py`).
 - **Zufallsquelle:** SplitMix64 gegen die veröffentlichten Referenzwerte, eingefrorene Referenzwerte für drei Szenarien (`tests/test_rng.py`, `tests/test_network.py`).
 - **Live gegen Messreihe:** K\* und N\* eines Live-Szenarios sind für denselben Zufalls-Seed **bitgleich** zur Messreihe (`tests/test_results.py`).
-- **Mutationsprüfung:** `tools/mutation_check.py` ändert 36 Rechenstellen einzeln (Grenzen, Kosten, Abbruchregeln, Takt, Wegewahl, Zufallsrate); alle 36 werden von mindestens einem Test gefunden. Bewusst nicht in der Liste: Änderungen, die gleichwertig sind oder nur eine Heuristik-Vorliebe betreffen (Umweggrenze beim Einfügen ans Routenende greift nie, Umlegen ohne Ersparnis, Überschneidungsprüfung der exakten Aufteilung, Bedauern im Batch).
+- **Mutationsprüfung:** `tools/mutation_check.py` ändert 36 Rechenstellen einzeln (Grenzen, Kosten, Abbruchregeln, Takt, Wegewahl, Zufallsrate); alle 36 werden von mindestens einem Test gefunden. Bewusst nicht in der Liste: Änderungen, die gleichwertig sind oder nur eine Heuristik-Vorliebe betreffen (Umweggrenze beim Einfügen ans Routenende greift nie, Umlegen ohne Ersparnis, Überschneidungsprüfung der exakten Aufteilung, Regret im Batch).
 - **Presets:** jede Geschichte stimmt auf dem gezeigten Szenario (`tests/test_stories.py`), jede Schwelle kippt einzeln an künstlichen Werten.
 - **Oberfläche:** AppTest-Rauchtest (jeder Button, jeder Regler am Minimum und Maximum), Layout (Schnellstart oben, fester Kopf, aktives Preset hervorgehoben), Footer.
 
