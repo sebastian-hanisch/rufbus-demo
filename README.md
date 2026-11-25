@@ -1,7 +1,6 @@
 # Rufbus oder Linienbus: wo kippt es? – Streamlit-Demo
 
-<!-- TODO nach dem Deploy: direkt hierher den Live-Link setzen (Leerzeile davor und danach):
-**[→ Demo live ausprobieren](https://sebastianhanisch-rufbus-demo.streamlit.app/)** -->
+**[→ Demo live ausprobieren](https://sebastianhanisch-rufbus-demo.streamlit.app/)**
 
 Fall-Demo für die Website „Sebastian Hanisch – Operations Research und Machine Learning“ (`demos.html`, Gruppe ÖPNV), zweite Demo der Seite [ÖPNV und Fernverkehr optimieren](https://sebastianhanisch.net/oepnv-fernverkehr-optimierung.html) nach dem festen Liniennetz ([transit-demo](https://github.com/sebastian-hanisch/transit-demo)). Ein **Linienbus** fährt, ob jemand einsteigt oder nicht; ein **Rufbus** (Dial-a-Ride) fährt nur, wenn jemand ihn ruft. Die Demo rechnet live ein Szenario (Gebiet, Haltepunkte, Fahrtwünsche) und stellt daneben eine **vorgerechnete Messreihe über 30 Zufalls-Seeds je Zelle**: zwei Kostenkurven, den Kipppunkt mit Band, den Einfluss von Wartezeit, Umweg, Plätzen, Gebiet und Qualitätsmaß, drei Rufbus-Verfahren und einen exakten Tab für kleine Instanzen.
 
